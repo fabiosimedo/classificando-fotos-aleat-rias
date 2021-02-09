@@ -1,30 +1,8 @@
-const dados = [
-  {
-    nome: 'João do',
-    idade: 35,
-    genero: 'MASC - ',
-    procura: 'Feminino',
-    local: 'MG',
-    image: 'https://randomuser.me/api/portraits/men/82.jpg'
-  },
-  {
-    nome: 'Djen smith',
-    idade: 25,
-    genero: 'FEM - ',
-    procura: 'Masculino',
-    local: 'SP',
-    image: 'https://randomuser.me/api/portraits/women/2.jpg'
-  },
-  {
-    nome: 'José donizete',
-    idade: 50,
-    genero: 'MASC - ',
-    procura: 'Feminino',
-    local: 'RJ',
-    image: 'https://randomuser.me/api/portraits/men/12.jpg'
-  }
+//  'https://randomuser.me/api/portraits/men/82.jpg'
+const random = Math.floor((Math.random() * 99) + 1);
+const men = 'men',
+      woman = 'woman';
 
-];
 
 const perfis = iteraror(dados);
 
