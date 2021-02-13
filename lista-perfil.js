@@ -95,8 +95,8 @@ btnSim.addEventListener('click', (e) => {
   dados.logDados(resultados);
 
   setTimeout(() => {
-    btnSim.style.cssText = 'visibility: visible;';
-    btnNao.style.cssText = 'visibility: visible;';
+    btnSim.setAttribute('style', 'visibility: visible;');
+    btnNao.setAttribute('style', 'visibility: visible;');
     h6.classList.remove('bg-danger', 'text-light', 'bg-success');
     
     document.getElementById('resultados').innerHTML = '';
@@ -130,8 +130,8 @@ btnNao.addEventListener('click', (e) => {
   dados.logDados(resultados);
 
   setTimeout(() => {
-    btnSim.style.cssText = 'visibility: visible;';
-    btnNao.style.cssText = 'visibility: visible;';
+    btnSim.setAttribute('style', 'visibility: visible;');
+    btnNao.setAttribute('style', 'visibility: visible;');
     h6.classList.remove('bg-danger', 'text-light', 'bg-danger');
 
     document.getElementById('resultados').innerHTML = '';
