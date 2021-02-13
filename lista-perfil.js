@@ -3,7 +3,7 @@ const random = Math.floor((Math.random() * 99) + 1);
 const perguntas = [
   'Conhece essa pessoa?', 'Aceita convite no Facebook?',
   'Responde mensagem no messenger?', 'Autoriza te seguir no instagram?',
-  'Aceita solicitação de mensagem no DM?', 'Reage a comentátio em post?', 
+  'Aceita solicitação de mensagem no DM?', 'Reage a comentário em post?', 
   'Responde no WattsApp?', 'Salva contato na agenda?', 
   'Abre foto enviada no WattsApp?', 'Assiste history no WattsApp?',
   'Manda \'oi\' no WattsApp?', 'Responde \'oi\' no Watts App?', 'Bloqueia em todas redes?'
@@ -68,7 +68,7 @@ prox2.addEventListener('click', (e) => {
 
 
 input.addEventListener('click', () => {
-  ul.style.cssText = 'visibility: visible;list-style: none;'
+  ul.setAttribute('style', 'visibility: visible;list-style: none;');
   input.style.cssText = 'display: none;'
   h6.classList.remove('bg-warning');
   h6.innerText = perguntas.shift();
@@ -80,8 +80,8 @@ btnSim.addEventListener('click', (e) => {
   respostasPositivas.unshift(e.target.textContent);
   respostasTotais.unshift(e.target.textContent);
   
-  e.target.style.cssText = 'visibility: hidden;';
-  btnNao.style.cssText = 'visibility: hidden;'
+  e.target.setAttribute('style', 'visibility: hidden;');
+  btnNao.setAttribute('style', 'visibility: hidden;');
   h6.classList.add('bg-success', 'text-light');
   
   document.getElementById('resultados').innerHTML = `
@@ -89,7 +89,6 @@ btnSim.addEventListener('click', (e) => {
   <h3>${e.target.textContent}</h3>
   </div>
   `; 
-  
   
   let id = respostasTotais.length;
   const dados = new Respostas(id, h6.innerText, e.target.textContent);
@@ -116,8 +115,8 @@ btnNao.addEventListener('click', (e) => {
   respostasNegativas.unshift(e.target.textContent);
   respostasTotais.unshift(e.target.textContent);
 
-  e.target.style.cssText = 'visibility: hidden;';
-  btnSim.style.cssText = 'visibility: hidden;'
+  e.target.setAttribute('style', 'visibility: hidden;');
+  btnSim.setAttribute('style', 'visibility: hidden;');
   h6.classList.add('bg-danger', 'text-light');
 
   document.getElementById('resultados').innerHTML = `
